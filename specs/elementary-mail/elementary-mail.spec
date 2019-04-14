@@ -72,5 +72,5 @@ appstream-util validate-relax --nonet \
 
 
 %changelog
-* Sat Mar 16 2019 Fabio Valentini <decathorpe@gmail.com> - 1.0.8+git190316.212712.b47cdbbb-1
-- Update to latest snapshot.
+* Sun Apr 14 2019 Christopher Crouse <amz.x@protonmail.com> 
+- Forked spec from Fabio Valentini

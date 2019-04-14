@@ -41,3 +41,6 @@ ln -sf "%{name}.sh" "%{buildroot}/usr/bin/%{app_name}"
 %changelog
 * Mon Apr 1 2019 Christopher Crouse <amz.x@protonmail.com>
 - Initialized spec file
+
+* Sun Apr 14 2019 Christopher Crouse <amz.x@protonmail.com>
+- Update protonvpn-cli spec
