@@ -1,4 +1,5 @@
 %define debug_package %{nil}
+%define app_name pvpn
 
 Name:           protonvpn-cli
 Version:        1.1.2
@@ -28,9 +29,11 @@ ProtonVPN CLI is a command-line tool for Linux and macOS.
 %install
 mkdir -p "%{buildroot}/usr/bin"
 install -m 0755 "%{name}.sh" "%{buildroot}/usr/bin/%{name}"
+ln -sf "%{name}.sh" "%{buildroot}/usr/bin/%{app_name}"
 
 %files
 %{_bindir}/%{name}
+%{_bindir}/%{app_name}
 
 %license license.md
 %doc README.md
