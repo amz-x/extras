@@ -1,12 +1,11 @@
 %global srcname mail
 %global appname io.elementary.mail
-
-%global __provides_exclude_from ^%{_libdir}/%{appname}/.*\\.so$
+%global build_timestamp %{lua: print(os.date("%Y%m%d"))}
 
 Name:           elementary-mail
 Summary:        Mail app designed for elementary
 Version:        master
-Release:        1%{?dist}
+Release:        %{build_timestamp}
 License:        GPLv3+
 
 URL:            https://github.com/elementary/%{srcname}
@@ -74,3 +73,6 @@ appstream-util validate-relax --nonet \
 %changelog
 * Sun Apr 14 2019 Christopher Crouse <amz.x@protonmail.com> 
 - Forked spec from Fabio Valentini
+
+* Sun Apr 14 2019 Christopher Crouse <amz.x@protonmail.com> 
+- Point source to master branch
