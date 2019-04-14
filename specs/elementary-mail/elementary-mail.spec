@@ -5,12 +5,12 @@
 
 Name:           elementary-mail
 Summary:        Mail app designed for elementary
-Version:        1.0.8
+Version:        master
 Release:        1%{?dist}
 License:        GPLv3+
 
 URL:            https://github.com/elementary/%{srcname}
-Source0:        %{url}/archive/%{version}.tar.gz
+Source0:        %{url}/archive/%{version}.tar.gz#/%{srcname}-%{version}.tar.gz
 
 BuildRequires:  desktop-file-utils
 BuildRequires:  gettext
@@ -36,7 +36,7 @@ Requires:       hicolor-icon-theme
 
 
 %prep
-%autosetup
+%autosetup -n %{srcname}-master
 
 
 %build
