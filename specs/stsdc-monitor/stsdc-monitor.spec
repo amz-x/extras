@@ -12,6 +12,8 @@ License:        GPLv3+
 URL:            https://github.com/stsdc/%{srcname}
 Source0:        https://github.com/stsdc/%{srcname}/archive/%{version}.tar.gz#/%{name}-%{version}.tar.gz
 
+Patch0:        https://raw.githubusercontent.com/amz-x/extras/master/sources/stsdc-monitor/00-meson-build-fix.patch
+
 BuildRequires:  desktop-file-utils
 BuildRequires:  gettext
 BuildRequires:  libappstream-glib
@@ -55,9 +57,7 @@ desktop-file-validate \
     %{buildroot}/%{_datadir}/applications/%{appname}.desktop
 
 # @TODO - Requires Workaround 
-# appstream-util validate-relax --nonet \
-#     %{buildroot}/%{_datadir}/metainfo/%{appname}.appdata.xml
-
+# appstream-util validate-relax --nonet %{buildroot}/%{_datadir}/metainfo/%{appname}.appdata.xml
 
 %files -f %{appname}.lang
 %doc README.md
@@ -71,10 +71,10 @@ desktop-file-validate \
 %{_datadir}/glib-2.0/schemas/%{appname}.gschema.xml
 %{_datadir}/metainfo/%{appname}.appdata.xml
 
+# Icons
+%{_datadir}/icons/hicolor/*/apps/%{appname}.svg
+
 
 %changelog
-* Sun Apr 14 2019 Christopher Crouse <amz.x@protonmail.com> 
-- Forked spec from Fabio Valentini
-
-* Sun Apr 14 2019 Christopher Crouse <amz.x@protonmail.com> 
-- Point source to master branch
+* Mon Apr 15 2019 Christopher Crouse <amz.x@protonmail.com> 
+- Setup spec
