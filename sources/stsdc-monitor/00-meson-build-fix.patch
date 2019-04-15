@@ -1,0 +1,15 @@
+diff --git a/meson.build b/meson.build
+index 4382e40..9ade199 100644
+--- a/meson.build
++++ b/meson.build
+@@ -106,9 +106,7 @@ shared_module(
+         wingpanel
+     ],
+     install: true,
+-    # install_dir : wingpanel.get_pkgconfig_variable('indicatorsdir'), <- installs to /usr/local/
+-    install_dir : '/usr/lib/x86_64-linux-gnu/wingpanel/'
+-
++    install_dir : wingpanel.get_pkgconfig_variable('indicatorsdir')
+ )
+ 
+ # Add in a post install script
