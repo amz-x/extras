@@ -4,7 +4,7 @@
 %global appname com.github.stsdc.monitor
 
 Name:           stsdc-monitor
-Summary:        Mail app designed for elementary
+Summary:        Manage processes and monitor system resources
 Version:        0.4.4
 Release:        1%{?dist}
 License:        GPLv3+
