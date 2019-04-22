@@ -53,11 +53,12 @@ Requires:       hicolor-icon-theme
 
 
 %check
+
 desktop-file-validate \
     %{buildroot}/%{_datadir}/applications/%{appname}.desktop
 
-# @TODO - Requires Workaround 
-# appstream-util validate-relax --nonet %{buildroot}/%{_datadir}/metainfo/%{appname}.appdata.xml
+appstreamcli validate --nonet \
+    %{buildroot}/%{_datadir}/metainfo/%{appname}.appdata.xml
 
 %files -f %{appname}.lang
 %doc README.md
@@ -74,5 +75,8 @@ desktop-file-validate \
 
 
 %changelog
+* Mon Apr 22 2019 Christopher Crouse <amz.x@protonmail.com>
+- Updated spec file to use appstreamcli
+
 * Mon Apr 15 2019 Christopher Crouse <amz.x@protonmail.com> 
 - Setup spec
