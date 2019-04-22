@@ -70,8 +70,6 @@ desktop-file-validate \
 %{_datadir}/applications/%{appname}.desktop
 %{_datadir}/glib-2.0/schemas/%{appname}.gschema.xml
 %{_datadir}/metainfo/%{appname}.appdata.xml
-
-# Icons
 %{_datadir}/icons/hicolor/*/apps/%{appname}.svg
 
 
