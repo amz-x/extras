@@ -3,28 +3,23 @@
 Name:           antibody
 Version:        4.1.1
 Release:        1%{?dist}
-Summary:        The fastest shell plugin manager
+Summary:        ZSH shell plugin manager
 
 License:        MIT
 URL:            https://github.com/getantibody/%{name}
-Source0:        %{url}/archive/v%{version}.tar.gz
+Source0:        %{url}/archive/v%{version}.tar.gz#/%{name}-%{version}.tar.gz
 
 BuildRequires:  git
 BuildRequires:  go
 
 %description
-Antibody is a shell plugin manager made from the ground up thinking about performance
+%{summary}.
 
 %prep
-
-%autosetup
-sed -i "25s/dev/%{version}/" "main.go"
+%autosetup -n %{name}-%{version}
 
 %build 
 go build .
-
-%check
-make test
 
 %install
 mkdir -p "%{buildroot}/usr/bin"
@@ -37,5 +32,8 @@ install -m 0755 "%{name}" "%{buildroot}/usr/bin/%{name}"
 %doc README.md
 
 %changelog
+* Mon Apr 22 2019 Christopher Crouse <amz.x@protonmail.com>
+- Updated spec file
+
 * Sun Mar 31 2019 Christopher Crouse <amz.x@protonmail.com>
 - Initialized spec file

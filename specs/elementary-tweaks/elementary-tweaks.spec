@@ -14,7 +14,6 @@ Source0:        %{url}/archive/master.tar.gz#/%{name}-%{version}.tar.gz
 BuildRequires:  meson
 BuildRequires:  vala
 
-
 BuildRequires:  pkgconfig(glib-2.0)
 BuildRequires:  pkgconfig(gobject-2.0)
 BuildRequires:  pkgconfig(granite)
