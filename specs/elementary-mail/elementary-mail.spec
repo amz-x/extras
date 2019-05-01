@@ -4,8 +4,8 @@
 
 Name:           elementary-mail
 Summary:        Mail app designed for elementary
-Version:        master
-Release:        %{build_timestamp}
+Version:        %{build_timestamp}
+Release:        1%{?dist}
 License:        GPLv3+
 
 URL:            https://github.com/elementary/%{srcname}
