@@ -17,6 +17,7 @@ BuildRequires:	switchboard-devel
 
 BuildRequires:  pkgconfig(glib-2.0)
 BuildRequires:  pkgconfig(gobject-2.0)
+BuildRequires:	pkgconfig(gconf-2.0)
 BuildRequires:  pkgconfig(granite)
 BuildRequires:  pkgconfig(gee-0.8)
 BuildRequires:  pkgconfig(camel-1.2)
