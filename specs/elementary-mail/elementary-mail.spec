@@ -9,7 +9,7 @@ Release:        1%{?dist}
 License:        GPLv3+
 
 URL:            https://github.com/elementary/%{srcname}
-Source0:        %{url}/archive/%{version}.tar.gz#/%{srcname}-%{version}.tar.gz
+Source0:        %{url}/archive/master.tar.gz#/%{srcname}-%{version}.tar.gz
 
 BuildRequires:  desktop-file-utils
 BuildRequires:  gettext
