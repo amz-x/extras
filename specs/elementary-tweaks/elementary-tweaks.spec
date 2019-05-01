@@ -26,6 +26,8 @@ BuildRequires:  pkgconfig(webkit2gtk-web-extension-4.0)
 BuildRequires:  pkgconfig(folks)
 
 Requires:       hicolor-icon-theme
+Requires:		switchboard%{?_isa}
+Supplements:	switchboard%{?_isa}
 
 %description
 %{summary}.
