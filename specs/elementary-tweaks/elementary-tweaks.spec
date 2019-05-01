@@ -13,7 +13,6 @@ Source0:        %{url}/archive/master.tar.gz#/%{name}-%{version}.tar.gz
 
 BuildRequires:  meson
 BuildRequires:  vala
-BuildRequires:	switchboard-devel
 
 BuildRequires:  pkgconfig(glib-2.0)
 BuildRequires:  pkgconfig(gobject-2.0)
@@ -26,6 +25,9 @@ BuildRequires:  pkgconfig(libedataserverui-1.2)
 BuildRequires:  pkgconfig(webkit2gtk-4.0)
 BuildRequires:  pkgconfig(webkit2gtk-web-extension-4.0)
 BuildRequires:  pkgconfig(folks)
+BuildRequires:	pkgconfig(polkit-gobject-1)
+BuildRequires: 	pkgconfig(switchboard-2.0)
+BuildRequires:	pkgconfig(gtk+-3.0)
 
 Requires:       hicolor-icon-theme
 
