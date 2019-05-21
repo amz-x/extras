@@ -36,8 +36,20 @@ Requires:       hicolor-icon-theme
 %install
 %meson_install
 
+%check
+desktop-file-validate %{buildroot}/%{_datadir}/applications/%{appname}.desktop
+
 %files
+%doc README.md
+%license LICENSE
+
 %{_bindir}/%{appname}
+
+%{_datadir}/applications/%{appname}.desktop
+%{_datadir}/glib-2.0/schemas/%{appname}.gschema.xml
+%{_datadir}/metainfo/%{appname}.appdata.xml
+%{_datadir}/icons/hicolor/*/apps/%{appname}.svg
+%{_datadir}/locale/*/LC_MESSAGES/%{appname}.mo
 
 %changelog
 * Mon May 20 2019 Christopher Crouse <mail@amz-x.com>
