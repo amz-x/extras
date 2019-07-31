@@ -32,7 +32,7 @@ install -m 0755 "%{name}" "%{buildroot}/usr/bin/%{name}"
 %doc README.md
 
 %changelog
-* Wed July 31 2019 Christopher Crouse <mail@amz-x.com>
+* Wed Jul 31 2019 Christopher Crouse <mail@amz-x.com>
 - Bumped version
 
 * Mon Apr 22 2019 Christopher Crouse <mail@amz-x.com>
