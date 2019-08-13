@@ -3,9 +3,9 @@
 %global srcname monitor
 %global appname com.github.stsdc.monitor
 
-Name:           stsdc-monitor
+Name:           elementary-monitor
 Summary:        Manage processes and monitor system resources
-Version:        0.4.4
+Version:        0.5.0
 Release:        1%{?dist}
 License:        GPLv3+
 
@@ -75,8 +75,11 @@ appstreamcli validate --nonet \
 
 
 %changelog
-* Mon Apr 22 2019 Christopher Crouse <amz.x@protonmail.com>
+* Tue Aug 13 2019 Christopher Crouse <mail@amz-x.com>
+- Bumped version
+
+* Mon Apr 22 2019 Christopher Crouse <mail@amz-x.com>
 - Updated spec file to use appstreamcli
 
-* Mon Apr 15 2019 Christopher Crouse <amz.x@protonmail.com> 
+* Mon Apr 15 2019 Christopher Crouse <mail@amz-x.com> 
 - Setup spec
