@@ -57,8 +57,9 @@ Requires:       hicolor-icon-theme
 desktop-file-validate \
     %{buildroot}/%{_datadir}/applications/%{appname}.desktop
 
-appstreamcli validate --nonet \
-    %{buildroot}/%{_datadir}/metainfo/%{appname}.appdata.xml
+# @NOTE - Not Working
+# appstreamcli validate --nonet \
+#     %{buildroot}/%{_datadir}/metainfo/%{appname}.appdata.xml
 
 %files -f %{appname}.lang
 %doc README.md
@@ -76,7 +77,8 @@ appstreamcli validate --nonet \
 
 %changelog
 * Tue Aug 13 2019 Christopher Crouse <mail@amz-x.com>
-- Bumped version
+- Bumped version 
+- Temporary workaround for appstreamcli 
 
 * Mon Apr 22 2019 Christopher Crouse <mail@amz-x.com>
 - Updated spec file to use appstreamcli
