@@ -1,7 +1,7 @@
 %global pkgname molecule
 %global setup_flags SKIP_PIP_INSTALL=1 PBR_VERSION=%{version}
  
-Name: python3-moleculez
+Name: python-molecule
 Version:  2.20.1
 Release: 2%{?dist}
 Summary: Molecule is designed to aid in the development and testing of Ansible roles
