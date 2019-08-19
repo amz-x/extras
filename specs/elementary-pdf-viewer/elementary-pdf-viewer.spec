@@ -2,7 +2,7 @@
 %global appname	com.github.lainsce.aesop
 
 Name:			elementary-pdf-viewer
-Version:		1.1.1
+Version:		1.1.3
 Release:		1%{?dist}
 Summary:		The simplest PDF viewer around
 
@@ -52,6 +52,9 @@ desktop-file-validate %{buildroot}/%{_datadir}/applications/%{appname}.desktop
 %{_datadir}/locale/*/LC_MESSAGES/%{appname}.mo
 
 %changelog
+* Mon Aug 19 2019 Christopher Crouse <mail@amz-x.com>
+- Version bump to v1.1.3
+
 * Fri May 24 2019 Christopher Crouse <mail@amz-x.com>
 - Updated spaces with tab indentation
 

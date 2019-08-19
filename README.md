@@ -10,5 +10,4 @@ antibody                | ZSH Shell Plugin Manager                  | ![rpmbuild
 elementary-mail         | Pantheon Email Client                     | ![rpmbuild](https://copr.fedorainfracloud.org/coprs/amz/extras/package/elementary-mail/status_image/last_build.png)
 elementary-pdf-viewer   | PDF Viewer                                | ![rpmbuild](https://copr.fedorainfracloud.org/coprs/amz/extras/package/antibody/status_image/last_build.png)
 elementary-tweaks       | System Configuration Tool                 | ![rpmbuild](https://copr.fedorainfracloud.org/coprs/amz/extras/package/elementary-pdf-viewer/status_image/last_build.png)
-protonvpn-cli           | Proton VPN CLI                            | ![rpmbuild](https://copr.fedorainfracloud.org/coprs/amz/extras/package/protonvpn-cli/status_image/last_build.png)
-stsdc-monitor           | Pantheon System Monitor Application       | ![rpmbuild](https://copr.fedorainfracloud.org/coprs/amz/extras/package/stsdc-monitor/status_image/last_build.png)
+elementary-monitor		| Pantheon System Monitor Application		| ![rpmbuild](https://copr.fedorainfracloud.org/coprs/amz/extras/package/elementary-monitor/status_image/last_build.png)
