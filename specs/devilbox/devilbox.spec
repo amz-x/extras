@@ -6,7 +6,7 @@ Release:        1%{?dist}
 Summary:        The Devilbox is a modern and highly customisable dockerized PHP stack supporting full LAMP and MEAN and running on all major platforms
 
 License:        MIT
-URL:            https://github.com/getantibody/%{name}
+URL:            https://github.com/cytopia/%{name}
 Source0:        %{url}/archive/v%{version}.tar.gz#/%{name}-%{version}.tar.gz
 
 BuildRequires:  git
