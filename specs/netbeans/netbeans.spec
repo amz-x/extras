@@ -1,3 +1,5 @@
+# Issue: https://issues.apache.org/jira/browse/NETBEANS-239 
+
 Name:			netbeans
 Version:		11.1
 Release:		1%{?dist}
@@ -6,8 +8,10 @@ Summary:		Apache NetBeans is an open source development environment, tooling pla
 License:		Apache-2.0
 URL:			https://netbeans.org/
 Source0:		https://www-eu.apache.org/dist/%{name}/%{name}/%{version}/%{name}-%{version}-bin.zip#/%{name}-%{version}.zip
+Source1:		https://gitlab.com/amz-x/extras/blob/master/sources/%{name}/%{name}.desktop
 
 Requires:		java >= 1:1.8.0
+Requires:		javaj-devel >= 1:1.8.0
 Requires:		java-headless >= 1:1.8.0
 
 %description
@@ -24,6 +28,8 @@ cp -vr "." "%{buildroot}/opt/%{name}"
 
 # python fix
 sed -i 's/python/python3/g' "%{buildroot}/opt/%{name}/extide/ant/bin/runant.py"
+
+# desktop
 
 # cleanup
 rm -rf "%{buildroot}/opt/%{name}/ide/bin/nativeexecution/SunOS"*
