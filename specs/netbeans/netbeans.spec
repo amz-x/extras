@@ -1,4 +1,7 @@
-# Issue: https://issues.apache.org/jira/browse/NETBEANS-239 
+# Issue building from source:
+# https://issues.apache.org/jira/browse/NETBEANS-239 
+
+%global __provides_exclude_from ^.*\\.so$
 
 Name:			netbeans
 Version:		11.1
@@ -11,7 +14,7 @@ Source0:		https://www-eu.apache.org/dist/%{name}/%{name}/%{version}/%{name}-%{ve
 Source1:		https://gitlab.com/amz-x/extras/blob/master/sources/%{name}/%{name}.desktop
 
 Requires:		java >= 1:1.8.0
-Requires:		javaj-devel >= 1:1.8.0
+Requires:		java-devel >= 1:1.8.0
 Requires:		java-headless >= 1:1.8.0
 
 %description
@@ -20,18 +23,28 @@ Requires:		java-headless >= 1:1.8.0
 %prep
 %autosetup -n %{name}
 
+# @TODO - Need to replace _sourcedir
+cp -v "%{_sourcedir}/%{name}.desktop" "%{_builddir}/%{name}/%{name}.desktop"
+
 %install
 
-# copy files
+mkdir -p "%{buildroot}%{_bindir}"
+mkdir -p "%{buildroot}%{_datadir}/applications"
 mkdir -p "%{buildroot}/opt/%{name}"
+
 cp -vr "." "%{buildroot}/opt/%{name}"
+
+# cli
+ln -s "/opt/%{name}/bin/%{name}" "%{buildroot}%{_bindir}/%{name}"
+
+# desktop
+cp -v "%{name}.desktop" "%{buildroot}%{_datadir}/applications/%{name}.desktop"
 
 # python fix
 sed -i 's/python/python3/g' "%{buildroot}/opt/%{name}/extide/ant/bin/runant.py"
 
-# desktop
-
 # cleanup
+rm -r "%{buildroot}/opt/%{name}/%{name}.desktop"
 rm -rf "%{buildroot}/opt/%{name}/ide/bin/nativeexecution/SunOS"*
 rm -rf "%{buildroot}/opt/%{name}/ide/bin/nativeexecution/MacOSX"*
 rm -rf "%{buildroot}/opt/%{name}/ide/bin/nativeexecution/Windows"*
@@ -45,7 +58,12 @@ find "%{buildroot}/opt/%{name}/" -name "*.exe" -exec rm {} \;
 find "%{buildroot}/opt/%{name}/" -name "*.dll" -exec rm {} \;
 
 %files
+
 /opt/%{name}
+
+%{_bindir}/%{name}
+
+%{_datadir}/applications/%{name}.desktop
 
 %license LICENSE
 %doc README.html
