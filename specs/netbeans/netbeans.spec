@@ -69,5 +69,8 @@ find "%{buildroot}/opt/%{name}/" -name "*.dll" -exec rm {} \;
 %doc README.html
 
 %changelog
+* Sat Aug 24 2019 Christopher Crouse <mail@amz-x.com>
+- Updated spec file
+
 * Thu Aug 22 2019 Christopher Crouse <mail@amz-x.com>
 - Initialized spec file
