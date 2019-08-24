@@ -1,5 +1,8 @@
 # ~/.gitignore
 
-sources/*.tar.gz
 build/*
 buildroot/*
+rpms/*
+sources/*.tar.gz
+sources/*.zip
+srpms/*
