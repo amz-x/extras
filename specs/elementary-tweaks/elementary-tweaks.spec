@@ -57,5 +57,9 @@ Requires:       hicolor-icon-theme
 %{_datadir}/icons/hicolor/*/categories/preferences-*.svg
 
 %changelog
+
+* Sat Oct 26 2019 Christopher Crouse <mail@amz-x.com>
+- Bumped
+
 * Mon Apr 22 2019 Christopher Crouse <amz.x@protonmail.com>
 - Initialized spec file

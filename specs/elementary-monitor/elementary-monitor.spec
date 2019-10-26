@@ -6,7 +6,7 @@
 Name:           elementary-monitor
 Summary:        Manage processes and monitor system resources
 Version:        0.5.0
-Release:        1%{?dist}
+Release:        2%{?dist}
 License:        GPLv3+
 
 URL:            https://github.com/stsdc/%{srcname}
@@ -76,6 +76,10 @@ desktop-file-validate \
 
 
 %changelog
+
+* Sat Oct 26 2019 Christopher Crouse <mail@amz-x.com>
+- Bumped
+
 * Wed Aug 21 2019 Christopher Crouse <mail@amz-x.com>
 - Updated patch URL  
 
