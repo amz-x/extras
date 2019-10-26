@@ -2,7 +2,7 @@
 
 Name:           antibody
 Version:        4.2.0
-Release:        1%{?dist}
+Release:        2%{?dist}
 Summary:        ZSH shell plugin manager
 
 License:        MIT
