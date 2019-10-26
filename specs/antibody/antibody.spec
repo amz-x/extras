@@ -1,13 +1,13 @@
 %define debug_package %{nil}
 
 Name:           antibody
-Version:        4.20
+Version:        4.2.0
 Release:        1%{?dist}
 Summary:        ZSH shell plugin manager
 
 License:        MIT
 URL:            https://github.com/getantibody/%{name}
-Source0:        %{url}/archive/v%{version}.tar.gz#/%{name}-%{version}.tar.gz
+Source0:        https://github.com/getantibody/%{name}/archive/v%{version}.tar.gz#/%{name}-%{version}.tar.gz
 
 BuildRequires:  git
 BuildRequires:  go
@@ -35,6 +35,7 @@ install -m 0755 "%{name}" "%{buildroot}/usr/bin/%{name}"
 
 * Sat Oct 26 2019 Christopher Crouse <mail@amz-x.com>
 - Bumped version
+- Fixed Typo
 
 * Wed Jul 31 2019 Christopher Crouse <mail@amz-x.com>
 - Bumped version
