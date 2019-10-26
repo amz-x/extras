@@ -12,7 +12,7 @@ License:        GPLv3+
 URL:            https://github.com/stsdc/%{srcname}
 Source0:        https://github.com/stsdc/%{srcname}/archive/%{version}.tar.gz#/%{name}-%{version}.tar.gz
 
-Patch0:         https://gitlab.com/amz-x/extras/blob/master/sources/%{name}/00-meson-build-fix.patch
+Patch0:         https://github.com/amz-x/extras/blob/master/sources/%{name}/00-meson-build-fix.patch
 
 BuildRequires:  desktop-file-utils
 BuildRequires:  gettext
