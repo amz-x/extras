@@ -74,7 +74,6 @@ desktop-file-validate \
 %{_datadir}/metainfo/%{appname}.appdata.xml
 %{_datadir}/icons/hicolor/*/apps/%{appname}.svg
 
-
 %changelog
 
 * Sat Oct 26 2019 Christopher Crouse <mail@amz-x.com>
