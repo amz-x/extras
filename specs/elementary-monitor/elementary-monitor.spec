@@ -6,13 +6,13 @@
 Name:           elementary-monitor
 Summary:        Manage processes and monitor system resources
 Version:        0.5.0
-Release:        2%{?dist}
+Release:        3%{?dist}
 License:        GPLv3+
 
 URL:            https://github.com/stsdc/%{srcname}
 Source0:        https://github.com/stsdc/%{srcname}/archive/%{version}.tar.gz#/%{name}-%{version}.tar.gz
 
-Patch0:         https://github.com/amz-x/extras/blob/master/sources/%{name}/00-meson-build-fix.patch
+Patch0:         https://github.com/amz-x/extras/blob/master/sources/%{name}/00-meson-fix.patch
 
 BuildRequires:  desktop-file-utils
 BuildRequires:  gettext
@@ -78,6 +78,7 @@ desktop-file-validate \
 
 * Sat Oct 26 2019 Christopher Crouse <mail@amz-x.com>
 - Bumped
+- Updated Patch
 
 * Wed Aug 21 2019 Christopher Crouse <mail@amz-x.com>
 - Updated patch URL  
