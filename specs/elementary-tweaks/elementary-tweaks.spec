@@ -9,7 +9,7 @@ Summary:        A system settings panel for elementary
 
 License:        GPLv3+   
 URL:            https://github.com/%{name}/%{name}
-Source0:        %{url}/archive/master.tar.gz#/%{name}-%{version}.tar.gz
+Source0:        https://github.com/%{name}/%{name}/archive/master.tar.gz#/%{name}-%{version}.tar.gz
 
 BuildRequires:  meson
 BuildRequires:  vala
@@ -58,8 +58,11 @@ Requires:       hicolor-icon-theme
 
 %changelog
 
+* Mon Dec 09 2019 Christopher Crouse <mail@amz-x.com>
+- Bumped
+
 * Sat Oct 26 2019 Christopher Crouse <mail@amz-x.com>
 - Bumped
 
-* Mon Apr 22 2019 Christopher Crouse <amz.x@protonmail.com>
+* Mon Apr 22 2019 Christopher Crouse <mail@amz-x.com>
 - Initialized spec file
