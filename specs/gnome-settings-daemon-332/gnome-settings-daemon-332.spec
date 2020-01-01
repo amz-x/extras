@@ -16,7 +16,7 @@ Summary:        The daemon sharing settings from GNOME to GTK+/KDE applications
 License:        GPLv2+
 URL:            https://download.gnome.org/sources/%{src_name}
 Source0:        https://download.gnome.org/sources/%{src_name}/3.32/%{src_name}-%{version}.tar.xz
-Source1:        org.gnome.settings-daemon.plugins.power.gschema.override
+# Source1:        org.gnome.settings-daemon.plugins.power.gschema.override
 
 BuildRequires:  meson >= 0.44.0
 BuildRequires:  gcc
@@ -139,7 +139,7 @@ mkdir $RPM_BUILD_ROOT%{_libdir}/gnome-settings-daemon-3.0/gtk-modules
 %{_libexecdir}/gsd-power
 %{_sysconfdir}/xdg/autostart/org.gnome.SettingsDaemon.Power.desktop
 %{_datadir}/glib-2.0/schemas/org.gnome.settings-daemon.plugins.power.gschema.xml
-%{_datadir}/glib-2.0/schemas/org.gnome.settings-daemon.plugins.power.gschema.override
+# %{_datadir}/glib-2.0/schemas/org.gnome.settings-daemon.plugins.power.gschema.override
 
 %{_libexecdir}/gsd-print-notifications
 %{_sysconfdir}/xdg/autostart/org.gnome.SettingsDaemon.PrintNotifications.desktop
