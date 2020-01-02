@@ -7,7 +7,7 @@ Version:        %{build_timestamp}
 Release:        1%{?dist}
 Summary:        A system settings panel for elementary
 
-License:        GPLv3+   
+License:        GPLv3+
 URL:            https://github.com/%{name}/%{name}
 Source0:        https://github.com/%{name}/%{name}/archive/master.tar.gz#/%{name}-%{version}.tar.gz
 
@@ -16,7 +16,7 @@ BuildRequires:  vala
 
 BuildRequires:  pkgconfig(glib-2.0)
 BuildRequires:  pkgconfig(gobject-2.0)
-BuildRequires:	pkgconfig(gconf-2.0)
+BuildRequires:  pkgconfig(gconf-2.0)
 BuildRequires:  pkgconfig(granite)
 BuildRequires:  pkgconfig(gee-0.8)
 BuildRequires:  pkgconfig(camel-1.2)
@@ -25,9 +25,9 @@ BuildRequires:  pkgconfig(libedataserverui-1.2)
 BuildRequires:  pkgconfig(webkit2gtk-4.0)
 BuildRequires:  pkgconfig(webkit2gtk-web-extension-4.0)
 BuildRequires:  pkgconfig(folks)
-BuildRequires:	pkgconfig(polkit-gobject-1)
-BuildRequires: 	pkgconfig(switchboard-2.0)
-BuildRequires:	pkgconfig(gtk+-3.0)
+BuildRequires:  pkgconfig(polkit-gobject-1)
+BuildRequires:  pkgconfig(switchboard-2.0)
+BuildRequires:  pkgconfig(gtk+-3.0)
 
 Requires:       hicolor-icon-theme
 
@@ -57,6 +57,9 @@ Requires:       hicolor-icon-theme
 %{_datadir}/icons/hicolor/*/categories/preferences-*.svg
 
 %changelog
+
+* Thu Jan 02 2020 Christopher Crouse <mail@amz-x.com>
+- Fix linting & bumped
 
 * Mon Dec 09 2019 Christopher Crouse <mail@amz-x.com>
 - Bumped

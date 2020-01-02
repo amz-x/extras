@@ -10,3 +10,23 @@ antibody                | ZSH Shell Plugin Manager                  | ![rpmbuild
 elementary-mail         | Pantheon Email Client                     | ![rpmbuild](https://copr.fedorainfracloud.org/coprs/amz/extras/package/elementary-mail/status_image/last_build.png)
 elementary-tweaks       | System Configuration Tool                 | ![rpmbuild](https://copr.fedorainfracloud.org/coprs/amz/extras/package/elementary-tweaks/status_image/last_build.png)
 ubuntu-family-fonts		| Ubuntu Family Fonts						| ![rpmbuild](https://copr.fedorainfracloud.org/coprs/amz/extras/package/ubuntu-family-fonts/status_image/last_build.png)
+
+## Building
+
+Install package dependencies
+
+```bash
+sudo dnf builddep package.spec
+```
+
+Fetch required assets / sources
+
+```bash
+spectool -g -R package.spec
+```
+
+Build RPM package
+
+```bash
+rpmbuild -ba package.spec
+```
