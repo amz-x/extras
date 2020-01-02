@@ -2,8 +2,6 @@
 %global libname libvala-linter-1.0.so
 %global build_timestamp %{lua: print(os.date("%Y%m%d"))}
 
-%global __provides_exclude_from ^%{_libdir}/%{libname}
-
 Name:           vala-lint
 Version:        %{build_timestamp}
 Release:        1%{?dist}
