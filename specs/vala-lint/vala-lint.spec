@@ -1,15 +1,18 @@
 %global appname io.elementary.vala-lint
 %global libname libvala-linter-1.0.so
+
+%global build_version 3
 %global build_timestamp %{lua: print(os.date("%Y%m%d"))}
+%global build_name %{name}-%{build_timestamp}-%{build_version}
 
 Name:           vala-lint
 Version:        %{build_timestamp}
-Release:        2%{?dist}
+Release:        %{build_version}%{?dist}
 Summary:        Small command line tool and library for checking Vala code files for code-style errors
 
 License:        GPLv2+
 URL:            https://github.com/vala-lang/%{name}
-Source0:        https://github.com/vala-lang/%{name}/archive/master.tar.gz#/%{name}-%{version}.tar.gz
+Source0:        https://github.com/vala-lang/%{name}/archive/master.tar.gz#/%{build_name}.tar.gz
 
 BuildRequires:  meson
 BuildRequires:  vala
