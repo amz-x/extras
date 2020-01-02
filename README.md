@@ -1,8 +1,14 @@
-# AMZ's Personal RPM Repository
+# AMZ's Extras RPM Repository
 
-Personal collection of Fedora RPM Specs & Sources
+Extra collection of Fedora RPM Specs, Sources & Packages
 
-## Package Build Statuses
+## Table of Contents
+
+1. [Package Build Statuses](#package-build-statuses)
+2. [COPR Repository Installation](#copr-repository-installation)
+3. [Building New Packages](#building-new-packages)
+
+### Package Build Statuses
 
 Package                 | Description                               | Status
 ---                     | ---                                       | ---
@@ -10,8 +16,18 @@ antibody                | ZSH Shell Plugin Manager                  | ![rpmbuild
 elementary-mail         | Pantheon Email Client                     | ![rpmbuild](https://copr.fedorainfracloud.org/coprs/amz/extras/package/elementary-mail/status_image/last_build.png)
 elementary-tweaks       | System Configuration Tool                 | ![rpmbuild](https://copr.fedorainfracloud.org/coprs/amz/extras/package/elementary-tweaks/status_image/last_build.png)
 ubuntu-family-fonts     | Ubuntu Family Fonts                       | ![rpmbuild](https://copr.fedorainfracloud.org/coprs/amz/extras/package/ubuntu-family-fonts/status_image/last_build.png)
+vala-language-server    | Vala Language Server                      | ![rpmbuild](https://copr.fedorainfracloud.org/coprs/amz/extras/package/vala-language-server/status_image/last_build.png)
+vala-lint               | Vala Language Linter                      | ![rpmbuild](https://copr.fedorainfracloud.org/coprs/amz/extras/package/vala-lint/status_image/last_build.png)
 
-## Building Packages
+### COPR Repository Installation
+
+Enable COPR repository for Fedora
+
+```bash
+dnf copr enable amz/extras
+```
+
+### Building New Packages
 
 Install package dependencies
 
