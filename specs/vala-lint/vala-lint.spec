@@ -4,7 +4,7 @@
 
 Name:           vala-lint
 Version:        %{build_timestamp}
-Release:        1%{?dist}
+Release:        2%{?dist}
 Summary:        Small command line tool and library for checking Vala code files for code-style errors
 
 License:        GPLv2+
@@ -38,6 +38,9 @@ BuildRequires:  glib2-devel
 %doc README.md
 
 %changelog
+
+* Thu Jan 02 2020 Christopher Crouse <mail@amz-x.com>
+- Bumped version
 
 * Thu Jan 02 2020 Christopher Crouse <mail@amz-x.com>
 - Initialized spec file
