@@ -2,7 +2,7 @@
 
 Name:           antibody
 Version:        4.2.0
-Release:        3%{?dist}
+Release:        4%{?dist}
 Summary:        ZSH shell plugin manager
 
 License:        MIT
@@ -32,6 +32,9 @@ install -m 0755 "%{name}" "%{buildroot}/usr/bin/%{name}"
 %doc README.md
 
 %changelog
+
+* Wed Feb 05 2020 Christopher Crouse <mail@amz-x.com>
+- Bumped version
 
 * Thu Dec 12 2019 Christopher Crouse <mail@amz-x.com>
 - Rebuild

@@ -45,5 +45,8 @@ install -m 0755 "x86_64-redhat-linux-gnu/%{name}" "%{buildroot}/usr/bin/%{name}"
 
 %changelog
 
+* Wed Feb 05 2020 Christopher Crouse <mail@amz-x.com>
+- Bumped version
+
 * Thu Jan 02 2020 Christopher Crouse <mail@amz-x.com>
 - Initialized spec file

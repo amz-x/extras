@@ -42,6 +42,9 @@ BuildRequires:  glib2-devel
 
 %changelog
 
+* Wed Feb 05 2020 Christopher Crouse <mail@amz-x.com>
+- Bumped version
+
 * Thu Jan 02 2020 Christopher Crouse <mail@amz-x.com>
 - Bumped version
 

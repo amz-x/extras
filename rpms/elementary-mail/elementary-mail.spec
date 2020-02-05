@@ -70,6 +70,10 @@ appstream-util validate-relax --nonet \
 %{_datadir}/metainfo/%{appname}.appdata.xml
 
 %changelog
+
+* Wed Feb 05 2020 Christopher Crouse <mail@amz-x.com>
+- Bumped version
+
 * Sun Apr 14 2019 Christopher Crouse <amz.x@protonmail.com> 
 - Forked spec from Fabio Valentini
 

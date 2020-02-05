@@ -58,6 +58,9 @@ Requires:       hicolor-icon-theme
 
 %changelog
 
+* Wed Feb 05 2020 Christopher Crouse <mail@amz-x.com>
+- Bumped version
+
 * Thu Jan 02 2020 Christopher Crouse <mail@amz-x.com>
 - Fix linting & bumped
 
