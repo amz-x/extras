@@ -58,6 +58,9 @@ Requires:       hicolor-icon-theme
 
 %changelog
 
+* Mon Jul 06 2020 Christopher Croues <mail@amz-x.com>
+- Bumped version
+
 * Wed Feb 05 2020 Christopher Crouse <mail@amz-x.com>
 - Bumped version
 

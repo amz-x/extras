@@ -1,8 +1,8 @@
 %define debug_package %{nil}
 
 Name:           antibody
-Version:        4.2.0
-Release:        4%{?dist}
+Version:        6.0.1
+Release:        1%{?dist}
 Summary:        ZSH shell plugin manager
 
 License:        MIT
@@ -32,6 +32,9 @@ install -m 0755 "%{name}" "%{buildroot}/usr/bin/%{name}"
 %doc README.md
 
 %changelog
+
+* Mon Jul 06 2020 Christopher Croues <mail@amz-x.com>
+- Bumped version
 
 * Wed Feb 05 2020 Christopher Crouse <mail@amz-x.com>
 - Bumped version
