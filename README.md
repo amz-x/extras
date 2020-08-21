@@ -27,6 +27,12 @@ Enable COPR repository for Fedora
 dnf copr enable amz/extras
 ```
 
+### Setting Up RPM Build Directory
+
+```bash
+rpmdev-setuptree
+```
+
 ### Building New Packages
 
 Install package dependencies
