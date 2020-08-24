@@ -34,7 +34,6 @@ Recommends:     groff
 %files
 %doc README.md
 %license LICENSE
-
 %{_bindir}/sam
 %{python3_sitelib}/aws_sam_cli-*.egg-info/
 %{python3_sitelib}/samcli
