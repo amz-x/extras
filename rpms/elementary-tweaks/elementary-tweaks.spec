@@ -1,5 +1,7 @@
-%global app_name pantheon-tweaks
-%global srcname pantheon-tweaks-master
+#%define debug_package %{nil}
+
+%global appname pantheon-tweaks
+%global srcname pantheon-tweaks-main
 %global plugname pantheon-tweaks-plug
 %global build_timestamp %{lua: print(os.date("%Y%m%d"))}
 
@@ -15,20 +17,12 @@ Source0:        https://github.com/pantheon-tweaks/pantheon-tweaks/archive/main.
 BuildRequires:  meson
 BuildRequires:  vala
 
-BuildRequires:  pkgconfig(glib-2.0)
-BuildRequires:  pkgconfig(gobject-2.0)
-BuildRequires:  pkgconfig(gconf-2.0)
-BuildRequires:  pkgconfig(granite)
 BuildRequires:  pkgconfig(gee-0.8)
-BuildRequires:  pkgconfig(camel-1.2)
-BuildRequires:  pkgconfig(libedataserver-1.2)
-BuildRequires:  pkgconfig(libedataserverui-1.2)
-BuildRequires:  pkgconfig(webkit2gtk-4.0)
-BuildRequires:  pkgconfig(webkit2gtk-web-extension-4.0)
-BuildRequires:  pkgconfig(folks)
-BuildRequires:  pkgconfig(polkit-gobject-1)
-BuildRequires:  pkgconfig(switchboard-2.0)
+BuildRequires:  pkgconfig(glib-2.0)
+BuildRequires:  pkgconfig(granite) >= 5.3.0
 BuildRequires:  pkgconfig(gtk+-3.0)
+BuildRequires:  pkgconfig(switchboard-2.0)
+
 
 Requires:       hicolor-icon-theme
 
@@ -53,7 +47,7 @@ Requires:       hicolor-icon-theme
 %license COPYING
 %doc README.md
 
-%{_libdir}/switchboard/personal/lib%{name}.so
+%{_libdir}/switchboard/personal/lib%{appname}.so
 
 %{_datadir}/icons/hicolor/*/categories/preferences-*.svg
 
