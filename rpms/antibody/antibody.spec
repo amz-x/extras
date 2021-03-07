@@ -1,7 +1,7 @@
 %define debug_package %{nil}
 
 Name:           antibody
-Version:        6.0.1
+Version:        6.1.1
 Release:        1%{?dist}
 Summary:        ZSH shell plugin manager
 
@@ -32,6 +32,9 @@ install -m 0755 "%{name}" "%{buildroot}/usr/bin/%{name}"
 %doc README.md
 
 %changelog
+
+* Sun Mar 07 2021 Christopher Croues <mail@amz-x.com>
+- Bumped version
 
 * Mon Jul 06 2020 Christopher Croues <mail@amz-x.com>
 - Bumped version

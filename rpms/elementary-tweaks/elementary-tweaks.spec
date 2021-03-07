@@ -1,5 +1,6 @@
-%global srcname %{name}-master
-%global plugname %{name}-plug
+%global app_name pantheon-tweaks
+%global srcname pantheon-tweaks-master
+%global plugname pantheon-tweaks-plug
 %global build_timestamp %{lua: print(os.date("%Y%m%d"))}
 
 Name:           elementary-tweaks
@@ -8,8 +9,8 @@ Release:        1%{?dist}
 Summary:        A system settings panel for elementary
 
 License:        GPLv3+
-URL:            https://github.com/%{name}/%{name}
-Source0:        https://github.com/%{name}/%{name}/archive/master.tar.gz#/%{name}-%{version}.tar.gz
+URL:            https://github.com/pantheon-tweaks/pantheon-tweaks
+Source0:        https://github.com/pantheon-tweaks/pantheon-tweaks/archive/master.tar.gz#/%{name}-%{version}.tar.gz
 
 BuildRequires:  meson
 BuildRequires:  vala
@@ -57,6 +58,9 @@ Requires:       hicolor-icon-theme
 %{_datadir}/icons/hicolor/*/categories/preferences-*.svg
 
 %changelog
+
+* Sun Mar 07 2021 Christopher Croues <mail@amz-x.com>
+- Switched to pantheon-tweaks version
 
 * Mon Jul 06 2020 Christopher Croues <mail@amz-x.com>
 - Bumped version
