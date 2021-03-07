@@ -10,7 +10,7 @@ Summary:        A system settings panel for elementary
 
 License:        GPLv3+
 URL:            https://github.com/pantheon-tweaks/pantheon-tweaks
-Source0:        https://github.com/pantheon-tweaks/pantheon-tweaks/archive/master.tar.gz#/%{name}-%{version}.tar.gz
+Source0:        https://github.com/pantheon-tweaks/pantheon-tweaks/archive/main.tar.gz#/%{name}-%{version}.tar.gz
 
 BuildRequires:  meson
 BuildRequires:  vala
