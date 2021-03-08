@@ -20,6 +20,7 @@ BuildRequires:  vala
 
 BuildRequires:  pkgconfig(glib-2.0)
 BuildRequires:  pkgconfig(gio-2.0)
+BuildRequires:  pkgconfig(libvala-0.48)
 
 %description
 %{summary}.
