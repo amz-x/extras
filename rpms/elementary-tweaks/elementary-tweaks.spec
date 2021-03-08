@@ -1,5 +1,3 @@
-#%define debug_package %{nil}
-
 %global appname pantheon-tweaks
 %global srcname pantheon-tweaks-main
 %global plugname pantheon-tweaks-plug
@@ -48,10 +46,12 @@ Requires:       hicolor-icon-theme
 %doc README.md
 
 %{_libdir}/switchboard/personal/lib%{appname}.so
-
 %{_datadir}/icons/hicolor/*/categories/preferences-*.svg
 
 %changelog
+
+* Mon Mar 08 2021 Christopher Croues <mail@amz-x.com>
+- Cleanup file
 
 * Sun Mar 07 2021 Christopher Croues <mail@amz-x.com>
 - Switched to pantheon-tweaks version

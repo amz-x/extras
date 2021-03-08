@@ -1,49 +1,58 @@
-%global srcname %{name}-alpha
-
-%global build_version 1
-%global build_timestamp %{lua: print(os.date("%Y%m%d"))}
-%global build_name %{srcname}-%{build_timestamp}-%{build_version}
+%define debug_package %{nil}
 
 Name:           vala-language-server
-Version:        %{build_timestamp}
-Release:        %{build_version}%{?dist}
-Summary:        Vala Language Server
+Version:        0.48.1
+Release:        1%{?dist}
+Summary:        Code Intelligence for Vala
 
-License:        GPLv2+
-URL:            https://github.com/philippejer/%{srcname}
-Source0:        https://github.com/philippejer/%{srcname}/archive/master.tar.gz#/%{build_name}.tar.gz
+License:        LGPLv2+
+URL:            https://github.com/benwaffle/vala-language-server
+Source0:        https://github.com/benwaffle/vala-language-server/archive/%{version}.tar.gz#/%{name}-%{version}.tar.gz
 
 BuildRequires:  meson
-BuildRequires:  vala
-BuildRequires:  vala-devel
+BuildRequires:  ninja-build
+BuildRequires:  vala >= 0.48.3
+BuildRequires:  vala-devel >= 0.48.3
+BuildRequires:  gcc
+BuildRequires:  cmake
 
+BuildRequires:  pkgconfig(gee-0.8)
 BuildRequires:  pkgconfig(glib-2.0)
 BuildRequires:  pkgconfig(gobject-2.0)
-BuildRequires:  pkgconfig(gee-0.8)
 BuildRequires:  pkgconfig(gio-2.0)
-BuildRequires:  pkgconfig(jsonrpc-glib-1.0)
+BuildRequires:  pkgconfig(gio-unix-2.0)
+BuildRequires:  pkgconfig(jsonrpc-glib-1.0) >= 3.28
+BuildRequires:  pkgconfig(json-glib-1.0)
+BuildRequires:  pkgconfig(scdoc)
 
 %description
 %{summary}.
 
 %prep
-%autosetup -n %{srcname}-master
+%autosetup -n %{name}-%{version}
 
 %build
 %meson
 %meson_build
 
 %install
-mkdir -p "%{buildroot}/usr/bin"
-install -m 0755 "x86_64-redhat-linux-gnu/%{name}" "%{buildroot}/usr/bin/%{name}"
+%meson_install
 
 %files
-%{_bindir}/%{name}
 
-%license LICENSE
+%{_bindir}/%{name}
+%{_libdir}/gnome-builder/plugins/vala_langserv.py
+%{_libdir}/gnome-builder/plugins/vala_langserv.plugin
+
+%{_datadir}/man/man1/vala-language-server.1.gz
+
+%license COPYING
 %doc README.md
 
 %changelog
+
+* Mon Mar 08 2021 Christopher Croues <mail@amz-x.com>
+- Fixed build with new version 
 
 * Wed Feb 05 2020 Christopher Crouse <mail@amz-x.com>
 - Bumped version
