@@ -50,13 +50,13 @@ Requires:       hicolor-icon-theme
 
 %changelog
 
-* Mon Mar 08 2021 Christopher Croues <mail@amz-x.com>
+* Mon Mar 08 2021 Christopher Crouse <mail@amz-x.com>
 - Cleanup file
 
-* Sun Mar 07 2021 Christopher Croues <mail@amz-x.com>
+* Sun Mar 07 2021 Christopher Crouse <mail@amz-x.com>
 - Switched to pantheon-tweaks version
 
-* Mon Jul 06 2020 Christopher Croues <mail@amz-x.com>
+* Mon Jul 06 2020 Christopher Crouse <mail@amz-x.com>
 - Bumped version
 
 * Wed Feb 05 2020 Christopher Crouse <mail@amz-x.com>

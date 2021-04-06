@@ -2,7 +2,7 @@
 
 Name:           vala-language-server
 Version:        0.48.1
-Release:        1%{?dist}
+Release:        2%{?dist}
 Summary:        Code Intelligence for Vala
 
 License:        LGPLv2+
@@ -51,7 +51,10 @@ BuildRequires:  pkgconfig(scdoc)
 
 %changelog
 
-* Mon Mar 08 2021 Christopher Croues <mail@amz-x.com>
+* Tue Mar 09 2021 Christopher Crouse <mail@amz-x.com>
+- Fix typo
+
+* Mon Mar 08 2021 Christopher Crouse <mail@amz-x.com>
 - Fixed build with new version 
 
 * Wed Feb 05 2020 Christopher Crouse <mail@amz-x.com>

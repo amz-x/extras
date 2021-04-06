@@ -50,7 +50,10 @@ BuildRequires:  pkgconfig(libvala-0.48)
 
 %changelog
 
-* Mon Mar 08 2021 Christopher Croues <mail@amz-x.com>
+* Tue Mar 09 2021 Christopher Crouse <mail@amz-x.com>
+- Fix typo
+
+* Mon Mar 08 2021 Christopher Crouse <mail@amz-x.com>
 - Fix build & bumped version
 
 * Wed Feb 05 2020 Christopher Crouse <mail@amz-x.com>
