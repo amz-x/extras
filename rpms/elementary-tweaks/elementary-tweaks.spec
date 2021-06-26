@@ -50,6 +50,9 @@ Requires:       hicolor-icon-theme
 
 %changelog
 
+* Sat Jun 26 2021 Christopher Crouse <mail@amz-x.com>
+- Update
+
 * Mon Mar 08 2021 Christopher Crouse <mail@amz-x.com>
 - Cleanup file
 
