@@ -1,8 +1,8 @@
 %define debug_package %{nil}
 
 Name:           vala-language-server
-Version:        0.48.1
-Release:        2%{?dist}
+Version:        0.48.3
+Release:        1%{?dist}
 Summary:        Code Intelligence for Vala
 
 License:        LGPLv2+
@@ -50,6 +50,9 @@ BuildRequires:  pkgconfig(scdoc)
 %doc README.md
 
 %changelog
+
+* Fri Jul 09 2021 Christopher Crouse <mail@amz-x.com>
+- New version bump
 
 * Tue Mar 09 2021 Christopher Crouse <mail@amz-x.com>
 - Fix typo
