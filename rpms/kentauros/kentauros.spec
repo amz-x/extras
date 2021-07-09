@@ -1,7 +1,7 @@
 Name:           kentauros
 Summary:        Modular, automatic and configurable package build system
 Version:        1.0.7
-Release:        2%{?dist}
+Release:        3%{?dist}
 License:        GPLv2
 
 URL:            https://github.com/decathorpe/%{name}
@@ -51,13 +51,19 @@ uploading to copr works.
 %files
 %{_bindir}/ktr
 
+%{_datadir}/kentauros/default.conf
+%{_datadir}/kentauros/template.conf
+
 %{python3_sitelib}/kentauros
 %{python3_sitelib}/kentauros-%{version}-py%{python3_version}.egg-info/
 
 
 %changelog
+* Fri Jul 09 2021 Christopher Crouse <mail@amz-x.com> - 1.0.7-3
+- Update files section.
+
 * Fri Jul 09 2021 Christopher Crouse <mail@amz-x.com> - 1.0.7-2
-- Imported spec
+- Imported spec.
 
 * Sat May 27 2017 Fabio Valentini <decathorpe@gmail.com> - 1.0.7-1
 - Update to version 1.0.7.
