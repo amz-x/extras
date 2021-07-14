@@ -9,8 +9,8 @@ License:        GPLv3
 URL:            https://launchpad.net/indicator-application/
 Source0:        https://launchpad.net/indicator-application/12.10/%{version}/+download/%{name}-%{version}.tar.gz
 
-BuildRequires:  automake
-BuildRequires:  autoconf
+BuildRequires:  make
+BuildRequires:  gcc
 
 BuildRequires:  pkgconfig(dbus-glib-1)
 BuildRequires:  pkgconfig(dbusmenu-gtk3-0.4)
