@@ -6,8 +6,8 @@ Release:        1%{?dist}
 Summary:        Indicator to take menus from applications and place them in the panel
 
 License:        GPLv3
-URL:            http://launchpad.net/indicator-application/
-Source0:        http://launchpad.net/indicator-application/12.10/%{version}/+download/%{name}-%{version}.tar.gz
+URL:            https://launchpad.net/indicator-application/
+Source0:        https://launchpad.net/indicator-application/12.10/%{version}/+download/%{name}-%{version}.tar.gz
 
 BuildRequires:  automake
 BuildRequires:  autoconf
