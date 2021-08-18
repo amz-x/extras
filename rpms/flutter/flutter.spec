@@ -2,12 +2,12 @@
 
 Name:           flutter
 Version:        2.2.3
-Release:        2%{?dist}
+Release:        3%{?dist}
 Summary:        Flutter mobile app development framework.
 
 License:        BSD
 URL:            https://flutter.dev/
-Source0:        https://github.com/flutter/flutter/archive/%{version}.tar.gz#/%{name}-%{version}.tar.gz
+Source0:        https://storage.googleapis.com/flutter_infra_release/releases/stable/linux/%{name}_linux_%{version}-stable.tar.xz#/%{name}-%{version}.tar.xz
 
 BuildRequires:  bash
 BuildRequires:  curl
@@ -20,12 +20,11 @@ The Flutter mobile app development framework.
 Flutter allows developers to make cross-platform mobile apps with ease.
 
 %prep
-%autosetup -n %{name}-%{version}
+tar -xf %{_sourcedir}/%{name}-%{version}.tar.xz
 
 %install
 mkdir -p %{buildroot}/opt/%{name}/
-cp -r %{_builddir}/%{name}-%{version}/* %{buildroot}/opt/%{name}/
-
+cp -r %{_builddir}/%{name}/* %{buildroot}/opt/%{name}/
 mkdir -p  %{buildroot}%{_sysconfdir}/profile.d/
 
 touch %{buildroot}%{_sysconfdir}/profile.d/%{name}.sh
@@ -45,14 +44,10 @@ EOF
 %{_sysconfdir}/profile.d/%{name}.sh
 %{_sysconfdir}/profile.d/%{name}.csh
 
-
-%license LICENSE
-%doc README.md
-
 %changelog
 
 * Wed Aug 18 2021 Christopher Crouse <mail@amz-x.com>
-- Updated spec file
+- Updated file
 
 * Sun Jul 18 2021 Christopher Crouse <mail@amz-x.com>
 - Initialized spec file
