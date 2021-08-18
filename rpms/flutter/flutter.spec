@@ -2,7 +2,7 @@
 
 Name:           flutter
 Version:        2.2.3
-Release:        1%{?dist}
+Release:        2%{?dist}
 Summary:        Flutter mobile app development framework.
 
 License:        BSD
@@ -23,19 +23,31 @@ Flutter allows developers to make cross-platform mobile apps with ease.
 %autosetup -n %{name}-%{version}
 
 %install
-mkdir -p %{buildroot}/opt/flutter/
-mkdir -p %{buildroot}%{_bindir}
-cp -r %{_builddir}/%{name}-%{version}/* %{buildroot}/opt/flutter/
+mkdir -p %{buildroot}/opt/%{name}/
+cp -r %{_builddir}/%{name}-%{version}/* %{buildroot}/opt/%{name}/
+
+mkdir -p  %{buildroot}%{_sysconfdir}/profile.d/
+
+touch %{buildroot}%{_sysconfdir}/profile.d/%{name}.sh
+cat > %{buildroot}%{_sysconfdir}/profile.d/%{name}.sh <<-EOF
+export FLUTTER_HOME=/opt/flutter
+export PATH=\${PATH}:\${FLUTTER_HOME}/bin
+EOF
+
+touch %{buildroot}%{_sysconfdir}/profile.d/%{name}.csh
+cat > %{buildroot}%{_sysconfdir}/profile.d/%{name}.csh <<-EOF
+setenv FLUTTER_HOME /opt/flutter
+setenv PATH \${PATH}:\${FLUTTER_HOME}/bin:
+EOF
 
 %files
 /opt/flutter/*
+%{_sysconfdir}/profile.d/%{name}.sh
+%{_sysconfdir}/profile.d/%{name}.csh
+
 
 %license LICENSE
 %doc README.md
-
-%post
-ln -sf /opt/flutter/bin/dart    %{_bindir}/dart
-ln -sf /opt/flutter/bin/flutter %{_bindir}/flutter
 
 %changelog
 
