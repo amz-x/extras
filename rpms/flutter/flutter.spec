@@ -2,7 +2,7 @@
 
 Name:           flutter
 Version:        2.2.3
-Release:        3%{?dist}
+Release:        4%{?dist}
 Summary:        Flutter mobile app development framework.
 
 License:        BSD
@@ -14,6 +14,11 @@ BuildRequires:  curl
 BuildRequires:  git
 BuildRequires:  zip
 BuildRequires:  unzip
+
+Requires:       glibc
+Requires:       glibc-devel
+Requires:       libglvnd-egl
+Requires:       libglvnd-devel
 
 %description
 The Flutter mobile app development framework.
