@@ -1,6 +1,6 @@
 Name:           flutter
 Version:        2.2.3
-Release:        5%{?dist}
+Release:        6%{?dist}
 Summary:        Flutter mobile app development framework.
 
 License:        BSD
@@ -11,17 +11,14 @@ AutoReq:        no
 
 BuildRequires:  rsync
 
-BuildRequires:  rpmlib(CompressedFileNames) <= 3.0.4-1
-BuildRequires:  rpmlib(FileDigests) <= 4.6.0-1
-BuildRequires:  rpmlib(PayloadFilesHavePrefix) <= 4.0-1
+Requires:       /bin/sh
+Requires:       /usr/bin/sh
 
 Requires:       bash
 Requires:       git
 Requires:       unzip
 Requires:       zip
 
-
-# Mesa packages
 Requires:       mesa-libEGL
 Requires:       mesa-libEGL-devel
 Requires:       mesa-libGL
@@ -96,10 +93,15 @@ Flutter allows developers to make cross-platform mobile apps with ease.
 tar -xf %{_sourcedir}/%{name}-%{version}.tar.xz
 
 %install
-mkdir -p %{buildroot}/opt/%{name}/
-rsync -rtv %{_builddir}/%{name}/ %{buildroot}/opt/%{name}/
+mkdir -p "%{buildroot}/opt/%{name}/"
+install -dm755 "%{buildroot}/opt/${name}"
+cp -ra "%{_builddir}/%{name}" "%{buildroot}/opt/"
 
-mkdir -p  %{buildroot}%{_sysconfdir}/profile.d/
+find "%{buildroot}/opt/%{name}" -type d -exec chmod a+rx {} +
+find "%{buildroot}/opt/%{name}" -type f -exec chmod a+r {} +
+chmod a+rw "%{buildroot}/opt/%{name}/version"
+
+mkdir -p  "%{buildroot}%{_sysconfdir}/profile.d/"
 
 touch %{buildroot}%{_sysconfdir}/profile.d/%{name}.sh
 cat > %{buildroot}%{_sysconfdir}/profile.d/%{name}.sh <<-EOF
@@ -114,14 +116,17 @@ setenv PATH \${PATH}:\${FLUTTER_HOME}/bin:
 EOF
 
 %files
-/opt/flutter/*
-/opt/flutter/.*
-
 %{_sysconfdir}/profile.d/%{name}.sh
 %{_sysconfdir}/profile.d/%{name}.csh
 
+%defattr(-,-,-)
+/opt/flutter/*
+/opt/flutter/.*
 
 %changelog
+
+* Thu Aug 19 2021 Christopher Crouse <mail@amz-x.com>
+- Fixed permissions
 
 * Wed Aug 18 2021 Christopher Crouse <mail@amz-x.com>
 - Updated file
