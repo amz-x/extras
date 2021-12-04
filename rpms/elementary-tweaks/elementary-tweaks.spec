@@ -1,16 +1,17 @@
+%define debug_package %{nil}
+
 %global appname pantheon-tweaks
 %global srcname pantheon-tweaks-main
 %global plugname pantheon-tweaks-plug
-%global build_timestamp %{lua: print(os.date("%Y%m%d"))}
 
 Name:           elementary-tweaks
-Version:        %{build_timestamp}
+Version:        1.0.2
 Release:        1%{?dist}
 Summary:        A system settings panel for elementary
 
 License:        GPLv3+
 URL:            https://github.com/pantheon-tweaks/pantheon-tweaks
-Source0:        https://github.com/pantheon-tweaks/pantheon-tweaks/archive/main.tar.gz#/%{name}-%{version}.tar.gz
+Source0:        https://github.com/pantheon-tweaks/pantheon-tweaks/archive/%{version}.tar.gz#/%{name}-%{version}.tar.gz
 
 BuildRequires:  meson
 BuildRequires:  vala
@@ -21,20 +22,17 @@ BuildRequires:  pkgconfig(granite) >= 5.3.0
 BuildRequires:  pkgconfig(gtk+-3.0)
 BuildRequires:  pkgconfig(switchboard-2.0)
 
-
 Requires:       hicolor-icon-theme
 
 %description
 %{summary}.
 
 %prep
-%autosetup -n %{srcname}
-
+%autosetup -n %{appname}-%{version}
 
 %build
 %meson
 %meson_build
-
 
 %install
 %meson_install
@@ -46,9 +44,14 @@ Requires:       hicolor-icon-theme
 %doc README.md
 
 %{_libdir}/switchboard/personal/lib%{appname}.so
+
+%{_datadir}/metainfo/%{appname}.appdata.xml
 %{_datadir}/icons/hicolor/*/categories/preferences-*.svg
 
 %changelog
+
+* Sat Dec 02 2021 Christopher Crouse <mail@amz-x.com>
+- Update to version 1.0.2
 
 * Sat Jun 26 2021 Christopher Crouse <mail@amz-x.com>
 - Update
