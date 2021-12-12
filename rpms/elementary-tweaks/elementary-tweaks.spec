@@ -5,7 +5,7 @@
 %global plugname pantheon-tweaks-plug
 
 Name:           elementary-tweaks
-Version:        1.0.2
+Version:        1.0.3
 Release:        1%{?dist}
 Summary:        A system settings panel for elementary
 
@@ -49,6 +49,9 @@ Requires:       hicolor-icon-theme
 %{_datadir}/icons/hicolor/*/categories/preferences-*.svg
 
 %changelog
+
+* Sun Dec 12 2021 Christopher Crouse <mail@amz-x.com>
+- Update to version 1.0.3
 
 * Sat Dec 02 2021 Christopher Crouse <mail@amz-x.com>
 - Update to version 1.0.2
