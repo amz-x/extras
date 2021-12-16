@@ -2,7 +2,7 @@
 
 Name:           indicator-application
 Version:        12.10.0
-Release:        2%{?dist}
+Release:        3%{?dist}
 Summary:        Indicator to take menus from applications and place them in the panel
 
 License:        GPLv3
@@ -44,6 +44,9 @@ make DESTDIR=%{buildroot} install
 %license COPYING
 
 %changelog
+
+* Thu Dec 16 2021 Christopher Crouse <mail@amz-x.com>
+- Rebuild
 
 * Wed Jul 14 2021 Christopher Crouse <mail@amz-x.com>
 - Initialized spec file
