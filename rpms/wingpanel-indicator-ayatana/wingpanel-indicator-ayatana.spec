@@ -50,5 +50,8 @@ Supplements:    wingpanel%{?_isa}
 
 %changelog
 
+* Thu Dec 16 2021 Christopher Crouse <mail@amz-x.com>
+- Rebuild
+
 * Wed Jul 14 2021 Christopher Crouse <mail@amz-x.com>
 - Initialized spec file

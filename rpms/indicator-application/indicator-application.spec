@@ -2,7 +2,7 @@
 
 Name:           indicator-application
 Version:        12.10.0
-Release:        1%{?dist}
+Release:        2%{?dist}
 Summary:        Indicator to take menus from applications and place them in the panel
 
 License:        GPLv3
