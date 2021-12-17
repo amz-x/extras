@@ -1,12 +1,10 @@
-%define debug_package %{nil}
-
 %global appname pantheon-tweaks
 %global srcname pantheon-tweaks-main
 %global plugname pantheon-tweaks-plug
 
 Name:           elementary-tweaks
 Version:        1.0.3
-Release:        1%{?dist}
+Release:        2%{?dist}
 Summary:        A system settings panel for elementary
 
 License:        GPLv3+
@@ -50,10 +48,14 @@ Requires:       hicolor-icon-theme
 
 %changelog
 
-* Sun Dec 12 2021 Christopher Crouse <mail@amz-x.com>
-- Update to version 1.0.3
+* Fri Dec 17 2021 Christopher Crouse <mail@amz-x.com>
+- 1.0.3-2
+- Fixed rpm-lint warnings
 
-* Sat Dec 02 2021 Christopher Crouse <mail@amz-x.com>
+* Sun Dec 12 2021 Christopher Crouse <mail@amz-x.com>
+- Updated to version 1.0.3
+
+* Thu Dec 02 2021 Christopher Crouse <mail@amz-x.com>
 - Update to version 1.0.2
 
 * Sat Jun 26 2021 Christopher Crouse <mail@amz-x.com>
