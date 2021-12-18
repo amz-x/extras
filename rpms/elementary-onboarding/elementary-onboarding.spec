@@ -3,7 +3,7 @@
 
 Name:           elementary-onboarding
 Version:        6.1.0
-Release:        2%{?dist}
+Release:        %autorelease
 Summary:        Onboarding app for new users
 
 License:        GPLv3+
@@ -11,7 +11,7 @@ URL:            https://github.com/elementary/onboarding
 Source0:        https://github.com/elementary/onboarding/archive/%{version}.tar.gz#/%{name}-%{version}.tar.gz
 
 # Patch to rename mo.po to ro_MD.po in language files to show no errors in rpmlint results
-Patch0:         https://patch-diff.githubusercontent.com/raw/elementary/onboarding/pull/151.patch
+Patch0:         https://patch-diff.githubusercontent.com/raw/elementary/onboarding/pull/151.diff#/00-upstream-fix-pull-151.patch
 
 BuildRequires:  desktop-file-utils
 BuildRequires:  gettext
@@ -64,11 +64,4 @@ appstream-util validate-relax --nonet \
 %license COPYING
 
 %changelog
-
-* Fri Dec 17 2021 Christopher Crouse <mail@amz-x.com>
-- 6.1.0-2
-- Included patch to language files
-
-* Fri Dec 17 2021 Christopher Crouse <mail@amz-x.com>
-- 6.1.0-1
-- Initialized spec file
+%autochangelog
