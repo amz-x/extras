@@ -3,7 +3,7 @@
 
 Name:           elementary-onboarding
 Version:        6.1.0
-Release:        %autorelease
+Release:        3%{?dist}
 Summary:        Onboarding app for new users
 
 License:        GPLv3+
@@ -64,4 +64,15 @@ appstream-util validate-relax --nonet \
 %license COPYING
 
 %changelog
-%autochangelog
+
+* Sat Dec 18 2021 Christopher Crouse <mail@amz-x.com>
+- 6.1.0-3
+- Updated patch to make use of raw version
+
+* Fri Dec 17 2021 Christopher Crouse <mail@amz-x.com>
+- 6.1.0-2
+- Included patch to language files
+
+* Fri Dec 17 2021 Christopher Crouse <mail@amz-x.com>
+- 6.1.0-1
+- Initialized spec file
