@@ -11,7 +11,7 @@ BuildRequires:  cmake
 BuildRequires:  gcc
 BuildRequires:  meson
 BuildRequires:  ninja-build
-BuildRequires:  vala >= 0.48
+BuildRequires:  vala >= 0.48.12
 BuildRequires:  vala-devel >= 0.48.12
 
 BuildRequires:  pkgconfig(gee-0.8)
@@ -19,13 +19,23 @@ BuildRequires:  pkgconfig(gio-2.0)
 BuildRequires:  pkgconfig(gio-unix-2.0)
 BuildRequires:  pkgconfig(glib-2.0)
 BuildRequires:  pkgconfig(gobject-2.0)
-BuildRequires:  pkgconfig(json-glib-1.0)
-BuildRequires:  pkgconfig(jsonrpc-glib-1.0) >= 3.30
+BuildRequires:  pkgconfig(json-glib-1.0) >= 1.4.4
+BuildRequires:  pkgconfig(jsonrpc-glib-1.0) >= 3.28
 BuildRequires:  pkgconfig(scdoc)
 
 
+Requires:       libvala >= 0.48.12
+
+Requires:       pkgconfig(gee-0.8)
+Requires:       pkgconfig(glib-2.0)
+Requires:       pkgconfig(gobject-introspection-1.0)
+Requires:       pkgconfig(json-glib-1.0) >= 1.4.4
+Requires:       pkgconfig(jsonrpc-glib-1.0) >= 3.28
+
+
 %description
-%{summary}.
+Provides code intelligence for Vala (and also Genie). Used with an
+editor and a plugin that supports the Language Server Protocol.
 
 
 %prep
