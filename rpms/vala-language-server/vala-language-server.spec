@@ -33,7 +33,7 @@ BuildRequires:  pkgconfig(scdoc)
 
 
 %build
-%meson
+%meson -Dplugins=false
 %meson_build
 
 
@@ -46,9 +46,6 @@ BuildRequires:  pkgconfig(scdoc)
 %doc README.md
 
 %{_bindir}/%{name}
-
-%{_libdir}/gnome-builder/plugins/vala_langserv.py
-%{_libdir}/gnome-builder/plugins/vala_langserv.plugin
 
 %{_datadir}/man/man1/%{name}.1.gz
 
