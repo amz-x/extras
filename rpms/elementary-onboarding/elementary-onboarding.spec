@@ -4,14 +4,14 @@
 Name:           elementary-onboarding
 Summary:        Onboarding app for new users
 Version:        6.1.0
-Release:        5%{?dist}
+Release:        6%{?dist}
 License:        GPLv3+
 
 URL:            https://github.com/elementary/onboarding
 Source0:        %{url}/archive/%{version}/%{srcname}-%{version}.tar.gz
 
 # Patch to fix "NotShowIn" in group "Desktop Entry" contains an unregistered value "Installer"
-Patch0:         https://raw.githubusercontent.com/amz-x/extras/patches/00-autostart-desktop-file-installer.patch
+Patch0:         https://raw.githubusercontent.com/amz-x/extras/master/patches/elementary-onboarding/00-autostart-desktop-file-installer.patch
 
 BuildRequires:  desktop-file-utils
 BuildRequires:  gettext
@@ -73,6 +73,9 @@ appstream-util validate-relax --nonet \
 
 
 %changelog
+* Tue Dec 21 2021 Christopher Crouse <mail@amz-x.com> - 6.1.0-6
+- fixed patch url
+
 * Tue Dec 21 2021 Christopher Crouse <mail@amz-x.com> - 6.1.0-5
 - Updated spec, included patch for autostart
 
