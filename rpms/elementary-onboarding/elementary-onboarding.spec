@@ -1,18 +1,17 @@
-%define srcname onboarding
-%define appname io.elementary.onboarding
+%global srcname onboarding
+%global appname io.elementary.onboarding
 
 Name:           elementary-onboarding
-Version:        6.1.0
-Release:        4%{?dist}
 Summary:        Onboarding app for new users
-
+Version:        6.1.0
+Release:        5%{?dist}
 License:        GPLv3+
+
 URL:            https://github.com/elementary/onboarding
 Source0:        %{url}/archive/%{version}/%{srcname}-%{version}.tar.gz
 
-# Patch to rename mo.po to ro_MD.po in language files to show no errors in rpmlint results
-# https://github.com/elementary/onboarding/pull/151
-Patch0:         %{url}/pull/151.patch
+# Patch to fix "NotShowIn" in group "Desktop Entry" contains an unregistered value "Installer"
+Patch0:         https://raw.githubusercontent.com/amz-x/extras/patches/00-autostart-desktop-file-installer.patch
 
 BuildRequires:  desktop-file-utils
 BuildRequires:  gettext
@@ -30,7 +29,7 @@ BuildRequires:  pkgconfig(libhandy-1)   >= 0.80.0
 Requires:       hicolor-icon-theme
 
 %description
-%{summary}.
+Onboarding application for new users to the Pantheon DE.
 
 
 %prep
@@ -46,10 +45,6 @@ Requires:       hicolor-icon-theme
 %meson_install
 
 %find_lang %{appname}
-
-# Fix "NotShowIn" in group "Desktop Entry" contains an unregistered value "Installer"
-# Might need this when creating a Fedora Pantheon Spin
-sed -i 's/Installer/X-Installer/g' %{buildroot}/%{_sysconfdir}/xdg/autostart/%{appname}.desktop
 
 
 %check
@@ -78,6 +73,9 @@ appstream-util validate-relax --nonet \
 
 
 %changelog
+* Tue Dec 21 2021 Christopher Crouse <mail@amz-x.com> - 6.1.0-5
+- Updated spec, included patch for autostart
+
 * Sat Dec 18 2021 Christopher Crouse <mail@amz-x.com> - 6.1.0-4
 - Updated spec for package review
 
