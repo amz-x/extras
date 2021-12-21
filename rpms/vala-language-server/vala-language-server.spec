@@ -4,7 +4,7 @@ Version:        0.48.3
 Release:        %autorelease
 License:        LGPLv2+
 
-URL:            https://github.com/benwaffle/vala-language-server
+URL:            https://github.com/Prince781/vala-language-server
 Source0:        %{url}/archive/%{version}/%{name}-%{version}.tar.gz
 
 BuildRequires:  cmake
