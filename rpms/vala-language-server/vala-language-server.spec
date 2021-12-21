@@ -9,7 +9,6 @@ Source0:        %{url}/archive/%{version}/%{name}-%{version}.tar.gz
 
 BuildRequires:  cmake
 BuildRequires:  gcc
-BuildRequires:  gnome-builder
 BuildRequires:  meson
 BuildRequires:  ninja-build
 BuildRequires:  vala >= 0.48
