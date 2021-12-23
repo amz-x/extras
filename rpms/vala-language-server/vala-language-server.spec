@@ -23,7 +23,6 @@ BuildRequires:  pkgconfig(json-glib-1.0) >= 1.4.4
 BuildRequires:  pkgconfig(jsonrpc-glib-1.0) >= 3.28
 BuildRequires:  pkgconfig(scdoc)
 
-
 Requires:       libvala >= 0.48.12
 
 Requires:       pkgconfig(gee-0.8)
@@ -34,8 +33,8 @@ Requires:       pkgconfig(jsonrpc-glib-1.0) >= 3.28
 
 
 %description
-Provides code intelligence for Vala (and also Genie). Used with an
-editor and a plugin that supports the Language Server Protocol.
+Provides code intelligence for Vala (and also Genie).
+Used with an editor and a plugin that supports the Language Server Protocol.
 
 
 %prep
