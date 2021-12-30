@@ -1,6 +1,6 @@
 Name:           vala-language-server
 Summary:        Language server for the Vala programming language
-Version:        0.48.3
+Version:        0.48.4
 Release:        %autorelease
 License:        LGPLv2+
 
@@ -30,6 +30,8 @@ Requires:       pkgconfig(glib-2.0)
 Requires:       pkgconfig(gobject-introspection-1.0)
 Requires:       pkgconfig(json-glib-1.0) >= 1.4.4
 Requires:       pkgconfig(jsonrpc-glib-1.0) >= 3.28
+
+Suggests:       gnome-builder
 
 
 %description
