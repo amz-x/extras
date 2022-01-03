@@ -4,7 +4,7 @@
 Name:           elementary-onboarding
 Summary:        Onboarding app for new users
 Version:        6.1.0
-Release:        7%{?dist}
+Release:        8%{?dist}
 License:        GPLv3+
 
 URL:            https://github.com/elementary/onboarding
@@ -74,6 +74,9 @@ appstream-util validate-relax --nonet \
 
 
 %changelog
+* Mon Jan 03 2022 Christopher Crouse <mail@amz-x.com> - 6.1.0-8
+- Rebuild to include updated patch
+
 * Wed Dec 22 2021 Christopher Crouse <mail@amz-x.com> - 6.1.0-7
 - Added comment of upstream bug link for patch
 
