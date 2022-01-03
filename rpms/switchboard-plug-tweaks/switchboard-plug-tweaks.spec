@@ -1,10 +1,10 @@
 %global __provides_exclude_from ^%{_libdir}/switchboard/.*\\.so$
 
-%global plug_type custom
+%global plug_type personal
 %global plug_name pantheon-tweaks
 
 Name:           switchboard-plug-tweaks
-Summary:        Switchboard Tweaks plug 
+Summary:        Switchboard Tweaks Plug 
 Version:        1.0.3
 Release:        %autorelease
 License:        GPLv3+
@@ -29,12 +29,11 @@ Supplements:    switchboard%{?_isa}
 Requires:       hicolor-icon-theme
 
 %description
-This plug can be used to change serveral additional settings
-in the Pantheon DE that is not provided by default.
-
+A system settings panel for the Pantheon Desktop Environment that lets
+you easily and safely customise your desktop's appearance.
 
 %prep
-%autosetup -n %{plug_name}-%{version} -p1
+%autosetup -n %{plug_name}-%{version}
 
 
 %build
@@ -59,10 +58,10 @@ appstream-util validate-relax --nonet \
 %license COPYING
 %doc README.md
 
+%{_libdir}/switchboard/%{plug_type}/lib%{plug_name}.so
+
 %{_datadir}/metainfo/%{plug_name}.appdata.xml
 %{_datadir}/icons/hicolor/*/categories/preferences-*.svg
-
-%{_libdir}/switchboard/personal/lib%{plug_name}.so
 
 
 %changelog
