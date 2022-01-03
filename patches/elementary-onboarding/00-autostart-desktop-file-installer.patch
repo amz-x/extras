@@ -1,5 +1,5 @@
 diff --git a/data/autostart.desktop b/data/autostart.desktop
-index 146dbbb..41f7a7d 100644
+index 146dbbb..d59058b 100644
 --- a/data/autostart.desktop
 +++ b/data/autostart.desktop
 @@ -3,7 +3,7 @@ Name=Welcome
@@ -7,7 +7,7 @@ index 146dbbb..41f7a7d 100644
  Exec=io.elementary.onboarding
  Icon=io.elementary.onboarding
 -NotShowIn=Installer;
-+NotShowIn=X-Installer;
++OnlyShowIn=Pantheon;
  Terminal=false
  Type=Application
  StartupNotify=true
