@@ -4,7 +4,7 @@
 Name:           elementary-onboarding
 Summary:        Onboarding app for new users
 Version:        6.1.0
-Release:        8%{?dist}
+Release:        9%{?dist}
 License:        GPLv3+
 
 URL:            https://github.com/elementary/onboarding
@@ -12,7 +12,7 @@ Source0:        %{url}/archive/%{version}/%{srcname}-%{version}.tar.gz
 
 # Patch to fix "NotShowIn" in group "Desktop Entry" contains an unregistered value "Installer"
 # https://github.com/elementary/onboarding/issues/154
-Patch0:         https://raw.githubusercontent.com/amz-x/extras/master/patches/elementary-onboarding/00-autostart-desktop-file-installer.patch
+Patch0:         %{url}/pull/155.patch
 
 BuildRequires:  desktop-file-utils
 BuildRequires:  gettext
@@ -45,6 +45,12 @@ Onboarding application for new users to the Pantheon DE.
 %install
 %meson_install
 
+# Remove @2 scaled icons that's not supported by hicolor-icon-theme
+# - https://bugzilla.redhat.com/show_bug.cgi?id=1537318
+# - https://gitlab.freedesktop.org/xdg/default-icon-theme/-/issues/2
+# - https://src.fedoraproject.org/rpms/hicolor-icon-theme/pull-request/2
+rm -r %{buildroot}/%{_datadir}/icons/hicolor/*@2/
+
 %find_lang %{appname}
 
 
@@ -74,6 +80,9 @@ appstream-util validate-relax --nonet \
 
 
 %changelog
+* Thu Jan 06 2022 Christopher Crouse <mail@amz-x.com> - 6.1.0-9
+- Remove @2 scaled icons that's not supported by hicolor-icon-theme
+
 * Mon Jan 03 2022 Christopher Crouse <mail@amz-x.com> - 6.1.0-8
 - Rebuild to include updated patch
 
