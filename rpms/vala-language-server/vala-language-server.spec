@@ -2,6 +2,9 @@ Name:           vala-language-server
 Summary:        Language server for the Vala programming language
 Version:        0.48.4
 Release:        %autorelease
+
+# The entire source is LGPLv2+, except plugins/gnome-builder/vala_langserv.py,
+# which is GPLv3+. It is not installed when the “plugins” meson option is false.
 License:        LGPLv2+
 
 URL:            https://github.com/Prince781/vala-language-server
@@ -58,7 +61,7 @@ Used with an editor and a plugin that supports the Language Server Protocol.
 
 %{_bindir}/%{name}
 
-%{_datadir}/man/man1/%{name}.1.gz
+%{_mandir}/man1/%{name}.1*
 
 
 %changelog
