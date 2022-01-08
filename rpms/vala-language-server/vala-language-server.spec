@@ -5,7 +5,7 @@ Release:        %autorelease
 
 # The entire source is LGPLv2+, except plugins/gnome-builder/vala_langserv.py, which is GPLv3+.
 # It is not installed when the "plugins" meson option is set to false.
-# Since GNOME Builder 41, The VLS the plugin has been included.
+# Since GNOME Builder 41, the VLS the plugin has been included.
 License:        LGPLv2+
 
 URL:            https://github.com/Prince781/vala-language-server
